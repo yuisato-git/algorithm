@@ -35,17 +35,18 @@ int main()
 {
     int a,b,sum;
     string op;
-
-    cin >> a >> op >> b;
     
-    while (op != "?")
+    while (true)
     {
+        cin >> a >> op >> b;
         if (op == "+") sum = a + b;
         else if (op == "-") sum = a - b;
         else if (op == "*") sum = a * b;
-        else if (op == "/") sum = a / b; 
+        else if (op == "/") sum = a / b;
+        else if (op == "?") break; 
 
         cout << sum << endl;
     }
     
+    return 0;
 }
